@@ -3,16 +3,25 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 .logo {
   text-align: left;
 }
 
 .container {
   text-align: center;
+  width: 100% -30px;
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+  grid-template-rows: 2fr 16fr 1fr;
 }
 
 .container div {
-  padding: 15px;
   font-size: 32px;
   font-family: Helvetica;
   font-weight: bold;
@@ -25,6 +34,10 @@
   display: grid;
   grid-template-columns: 25% auto;
   grid-template-rows: auto;
+  margin-bottom: 5px;
+  grid-row: 1;
+  align-content: center;
+  padding: 0px 15px;
 }
 
 .menu {
@@ -40,11 +53,24 @@
 
 .menu ul {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.content {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 5px;
+  gap: 5px;
+  overflow: hidden;
 }
 
 .sidebar {
   background-color: #C50208;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
+  padding: 15px;
 }
 
 .sidebar .photo {
@@ -53,6 +79,8 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  align-content: center;
 }
 
 
@@ -61,19 +89,40 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  align-content: center;  
+}
+
+.main {
+  grid-column: 2/5;
 }
 
 .nav {
   background-color: #C50208;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .article {
   background-color: #bccbde;
+  display: grid;
+  height: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 15px;
 }
 
 .article p {
@@ -87,6 +136,9 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  padding: 15px;
+  display: grid;
+  justify-content: center;
 }
 
 .card p {
@@ -102,6 +154,8 @@
 
 .footer {
   background-color: #393f4d;
+  padding: 15px;
+  grid-row: 3;
 }
 
 .footer p {

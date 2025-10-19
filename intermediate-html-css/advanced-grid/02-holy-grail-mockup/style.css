@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.logo {
+  text-align: left;
+}
+
 .container {
   text-align: center;
 }
@@ -17,11 +21,26 @@
 
 .header {
   background-color: #393f4d;
+  width: 100% -15px;
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: auto;
+}
+
+.menu {
+    align-content: center;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
+  text-align: right;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .sidebar {

@@ -1,3 +1,16 @@
+@keyframes bounceIn {
+	0%, 20%, 50%, 80%, 100% {
+    transform: scaleY(100%);
+    opacity: 1;
+  }
+	40% {
+    transform: scaleY(95%);
+  }
+	60% {
+    transform: scaleY(98%);
+  }
+}
+
 .dropdown-container {
   max-width: 250px;
   margin: 40px auto;
@@ -29,6 +42,7 @@ ul.dropdown-menu li:hover {
 
 .visible {
   transform: scaleY(100%);
+  animation: 550ms bounceIn 1s
 }
 
 
